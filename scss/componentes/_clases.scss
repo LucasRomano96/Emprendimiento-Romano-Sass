@@ -1,0 +1,26 @@
+.textoCentrado{
+    display:flex;
+    padding:5%
+}
+.tituloCentrado{
+    text-align: center;
+}
+.colorVioleta{
+    color: rgb(202, 97, 195);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.5 rem
+}
+.box{
+    width: 10px;
+    height: 10px;
+    margin: 15px 15px;
+    border-radius: 1.5px;
+}
+.transicion:hover{
+    transform: scale(2);
+    transition: all 2s;
+  }
+  .separador{
+    margin-top: 30px;
+}

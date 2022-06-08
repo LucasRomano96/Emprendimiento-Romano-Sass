@@ -1,0 +1,44 @@
+/*GRID*/
+.container {  display: grid;
+    grid-template-columns: 0.4fr 10.7fr 0.1fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    gap: 10px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "headerContainer headerContainer headerContainer"
+      ". mainContainer ."
+      "footerContainer footerContainer footerContainer";
+      .headerContainer { grid-area: headerContainer; }
+      .mainContainer {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.2fr 1.3fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "titulo titulo titulo titulo"
+          "div div div2 div2"
+          "div div div2 div2";
+        grid-area: mainContainer;
+        .titulo { grid-area: titulo; }
+      
+        .div { grid-area: div; }
+    
+        .div2 { grid-area: div2; }
+      }
+      .footerContainer { grid-area: footerContainer; }
+  }
+  /*Medias para distintos dispositivos*/
+  @media screen and (max-width: 768px) {
+    .mainContainer { grid-template-areas:
+      "titulo titulo titulo titulo"
+      "div div div div"
+      "div2 div2 div2 div2";
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .mainContainer { grid-template-areas:
+        "titulo titulo titulo titulo"
+        "div div div div"
+        "div2 div2 div2 div2";
+      }
+  }
