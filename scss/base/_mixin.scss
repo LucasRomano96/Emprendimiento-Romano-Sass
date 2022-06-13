@@ -1,0 +1,12 @@
+@mixin centrado{
+    text-align: center;
+}
+@mixin colores($colors, $borde, $ancho){
+    background-color: $colors;
+    margin: $borde;
+    width: $ancho;
+}
+
+$colors:rgb(179, 64, 156);
+$borde:20px;
+$ancho:50%;
